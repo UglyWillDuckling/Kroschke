@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <kroschke_debit>
+                <active>0</active>
+                <payment_action>Authorization</payment_action>
+                <model>Kroschke\Debit\Model\Methods\Debit</model>
+                <order_status>pending</order_status>
+                <title>Debit Card</title>
+                <instructions>Debit Card</instructions>
+                <allowspecific>0</allowspecific>
+                <group>additional</group>
+            </kroschke_debit>
+        </payment>
+    </default>
+</config>
