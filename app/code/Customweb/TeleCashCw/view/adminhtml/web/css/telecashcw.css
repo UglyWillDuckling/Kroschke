@@ -1,0 +1,111 @@
+.telecashcw-payment-information-block {
+	margin: 0 0 3rem;
+}
+
+.telecashcw-transaction-payment-information-block {
+	margin: 3rem 0;
+	background-color: #f1f1f1;
+	padding: 1rem;
+}
+
+.telecashcw-transaction-information .tooltip,
+.telecashcw-payment-information-block .tooltip {
+	float: right;
+}
+
+@media (min-width: 768px) {
+	.telecashcw-transaction-information,
+	.telecashcw-transaction-captures {
+		float: left;
+		width: calc( (100%) * .5 - 30px );
+	}
+	
+	.telecashcw-transaction-history,
+	.telecashcw-transaction-refunds {
+		float: right;
+		width: calc( (100%) * .5 - 30px );
+	}
+}
+
+.telecashcw_form .admin__field .note,
+.telecashcw_form .admin__field div.mage-error {
+	clear: both;
+	padding: 5px 0;
+	margin-left: calc( (100%) * .33333333 + 30px );	
+}
+.telecashcw_form .admin__field .note {
+	font-size: 12px;
+	color: #303030;
+}
+.telecashcw_form .admin__field div.mage-error,
+.telecashcw_form td.value div.mage-error {
+	font-size: 12px;
+	color: #e02b27;
+}
+
+.telecashcw_form .html-field {
+	line-height: 3.2rem;
+}
+
+.telecashcw_form .multi-control:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.telecashcw_form .multi-control > div > div {
+	width: auto;
+	float: left;
+	margin-right: 5px;
+	margin-top: 0;
+}
+
+
+/*** CHECKOUT ***/
+
+.telecashcw_form .card-number .multi-control > div > div {
+	width: 100%;
+	float: none;
+	margin: 0;
+}
+
+.telecashcw_form .card-brand-image-color.brand-is-deselected {
+	display:none;
+}
+
+.telecashcw_form .card-brand-image-grey.brand-is-selected {
+	display:none;
+}
+
+.telecashcw_form .card-brand-image-selection {
+	margin-top: 5px;
+}
+
+.telecashcw_form .card-brand-image-selection img {
+	width:auto;
+	height: 20px;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+.telecashcw_form .invalid-card-number,
+.telecashcw_form .invalid-cvc-number {
+	border-color: #ed8380;
+	background-image: url(../images/invalid.png) !important;
+	background-position: right 5px center;
+	background-repeat: no-repeat !important;
+}
+
+.telecashcw_form .valid-card-number,
+.telecashcw_form .valid-cvc-number {
+	background-image: url(../images/valid.png) !important;
+	background-position: right 5px center;
+	background-repeat: no-repeat !important;
+}
+
+.telecashcw_form .alias select {
+	width: 100%;
+}
+
+.telecashcw_form .alias select option:empty {
+	display: block;
+}

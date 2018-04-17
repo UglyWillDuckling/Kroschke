@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Customweb_TeleCashCw::transactions" title="TeleCash Transactions" module="Customweb_TeleCashCw" sortOrder="10" parent="Customweb_Base::sales_customweb" action="telecashcw/transaction" resource="Customweb_TeleCashCw::transaction" />
+
+        <add id="Customweb_TeleCashCw::config" title="TeleCash" module="Customweb_TeleCashCw" sortOrder="100" parent="Customweb_Base::config" action="telecashcw/config" resource="Customweb_TeleCashCw::config"/>
+    </menu>
+</config>

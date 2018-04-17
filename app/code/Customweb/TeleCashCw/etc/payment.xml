@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Payment:etc/payment.xsd">
+    <groups>
+        <group id="telecashcw">
+            <label>TeleCash</label>
+        </group>
+    </groups>
+    <methods>
+        <method name="telecashcw_generic">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_creditcard">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_mastercard">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_visa">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_americanexpress">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_diners">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_jcb">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_directdebitssepa">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_giropay">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_maestro">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_paypal">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_clickandbuy">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_direktueberweisung">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_sofortueberweisung">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_ideal">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_klarnaopeninvoice">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_klarnainstallments">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_masterpass">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method><method name="telecashcw_bcmc">
+			<allow_multiple_address>1</allow_multiple_address>
+		</method>
+    </methods>
+</payment>
