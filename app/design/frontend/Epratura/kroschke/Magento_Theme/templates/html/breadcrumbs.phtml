@@ -1,0 +1,45 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php if ($crumbs && is_array($crumbs)) : ?>
+    <div class="breadcrumbs">
+        <ul class="items">
+            <a class="back-button" href="javascript: history.go(-1)"></a>
+            <li class="item">Sie befinden sich hier:</li>
+            <?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
+                <li class="item <?= /* @escapeNotVerified */ $crumbName ?>">
+                    <?php if ($crumbInfo['link']) : ?>
+                        <a href="<?= /* @escapeNotVerified */ $crumbInfo['link'] ?>" title="<?= $block->escapeHtml($crumbInfo['title']) ?>"><?= $block->escapeHtml($crumbInfo['label']) ?></a>
+                    <?php elseif ($crumbInfo['last']) : ?>
+                        <strong><?= $block->escapeHtml($crumbInfo['label']) ?></strong>
+                    <?php else: ?>
+                        <?= $block->escapeHtml($crumbInfo['label']) ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <div class="breadcrumbs-info">
+            <div class="phone"><span>04102 804 0</span></div>
+            <div class="email"><span>info@kroschke.de</span></div>
+        </div>
+    </div>
+
+<?php endif; ?>
+
+<script>
+    require([
+            'jquery'],
+        function () {
+
+            jQuery(document).ready(function() {
+
+            });
+        });
+</script>

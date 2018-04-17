@@ -1,0 +1,13 @@
+// Flex Vertical Align Items (Center)
+.flex-align-items(@pos: center) {
+    -webkit-box-align: @pos;
+    -ms-flex-align: @pos;
+    align-items: @pos;
+};
+
+// Flex Order
+.flex-order(@num) {
+    -webkit-box-ordinal-group: (@num+1);
+    -ms-flex-order: @num;
+    order: @num;
+}

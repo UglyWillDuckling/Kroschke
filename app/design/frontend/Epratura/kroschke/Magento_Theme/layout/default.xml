@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!--Remove elements - header-->
+        <referenceBlock name="header" remove="true"/>
+
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="view.addto.wishlist" remove="true" />
+
+        <referenceBlock name="catalog.leftnav" remove="true" />
+
+        <!--Create header images certificate block-->
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="header.certificates" after="logo">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header-certificates</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <!--Move minicart to header links-->
+        <move element="minicart" destination="header.panel" before="-"/>
+        <!--Move Advanced search to header links-->
+        <!--<move element="advanced-search-link" destination="header.panel" before="-"/>-->
+
+        <!--Remove elements - footer-->
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+
+        <!--Create footer blocks-->
+        <referenceContainer name="footer">
+            <container name="page_footer_container_top" htmlTag="div" htmlClass="page-footer-container-top">
+                <block class="Magento\Cms\Block\Block" name="page.footer.top.blocks" after="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">page-footer-top</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="page_footer_container_bottom" htmlTag="div" htmlClass="page-footer-container-bottom" after="-">
+                <container name="page_footer_links_wrapper" htmlTag="div" htmlClass="page-footer-links-wrapper" after="-">
+                    <block class="Magento\Cms\Block\Block" name="page.footer.bottom.links" after="-">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-bottom-links</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>

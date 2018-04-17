@@ -1,0 +1,165 @@
+//
+// Common
+// ___________________________________
+& when (@media-common = true) {
+    .header.content {
+        .lib-vendor-prefix-display(flex);
+    }
+}
+
+//
+// Mobile
+// ___________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) { // max 767 px
+
+}
+
+//
+// Desktop
+// ___________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) { // min 768 px
+    .logo {
+        margin: 0;
+    }
+//}
+
+//.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) { // min 1024 px
+    .page-header {
+        .panel.wrapper {
+            background: @grey__header;
+        }
+
+        .panel.header {
+            height: 60px;
+        }
+
+        .header.links {
+            > li {
+                line-height: 40px;
+            }
+        }
+
+        .header.content {
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(row);
+
+            .logo {
+                .flex-order(0);
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+
+            .block-search {
+                .flex-order(1);
+                -webkit-box-flex: 2;
+                -ms-flex: 2;
+                flex: 2;
+            }
+
+            .header-certificates {
+                .flex-order(2);
+                -webkit-box-flex: 2;
+                -ms-flex: 2;
+                flex: 2;
+            }
+        }
+    }
+
+    .navigation {
+        font-family: 'futura med';
+
+        ul {
+            padding: 0;
+        }
+
+        li.level0 {
+            box-sizing: border-box;
+            padding: 0 50px;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:last-child {
+                padding-right: 50px;
+            }
+
+            &:hover {
+                background: @blue__link;
+
+                > .level-top {
+                    -webkit-box-shadow: inset 0 -1px 0 @lightblue;
+                    box-shadow: inset 0 -1px 0 @lightblue;
+                }
+
+                ul.submenu {
+                    li:last-of-type {
+                        a {
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+
+            ul.submenu {
+                background: @blue__link;
+                font-family: 'futura lite';
+                text-align: left;
+                text-transform: capitalize;
+                padding-bottom: 30px;
+
+                li:last-of-type {
+                    a {
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+
+                a {
+                    padding: 8px 0;
+                    -webkit-box-shadow: inset 0 -1px 0 @lightblue;
+                    box-shadow: inset 0 -1px 0 @lightblue;
+                }
+
+                a:hover,
+                a.ui-state-focus {
+                    background: @blue__link;
+                    -webkit-box-shadow: inset 0 -1px 0 @color-white;
+                    box-shadow: inset 0 -1px 0 @color-white;
+                    text-shadow: 1px 0 0 @color-white;
+                }
+
+                .level1 {
+                    margin-bottom: 0;
+                    padding: 0 50px;
+                }
+            }
+
+            &.parent {
+                > .level-top {
+                    &:after {
+                        color: @color-white;
+                        content: @icon-down;
+                        font-family: 'fontello';
+                        font-size: 32px;
+                        font-weight: 700;
+                        line-height: 50px;
+                        position: relative;
+                        top: 5px;
+                    }
+                }
+            }
+
+            > .level-top {
+                line-height: 60px;
+                padding: 15px 0;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .nav-sections {
+        background: none;
+    }
+}
