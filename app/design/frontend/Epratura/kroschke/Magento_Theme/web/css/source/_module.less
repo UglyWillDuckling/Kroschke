@@ -87,10 +87,8 @@
     }
 
     .breadcrumbs {
-        display: flex;
+        display: inline-block;
         height: 60px;
-        align-items: center;
-        justify-content: space-between;
 
         .items,
         a,
@@ -126,65 +124,69 @@
                 text-decoration: underline;
             }
         }
+    }
 
-        .phone, .email {
-            display: inline-block;
-            min-width: 60px;
-            height: 60px;
+    .back-button {
+        background: @blue__link url("../../web/images/arrow-prev.svg") no-repeat center;
+    }
 
+    .back-button, .phone:before, .email:before {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+    }
+
+    .breadcrumbs-info {
+       float: right;
+    }
+
+    .phone, .email {
+        display: inline-block;
+        min-width: 60px;
+        height: 60px;
+
+        span {
+            display: none;
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover, &:focus {
             span {
-                display: none;
+                display: inline-block;
                 transition: all 0.3s ease-out;
             }
+        }
+    }
 
-            &:hover, &:focus {
-                span {
-                    display: inline-block;
-                    transition: all 0.3s ease-out;
-                }
-            }
+    .phone {
+        background: @lightblue;
+        color: #fff;
+
+        span {
+            padding-right: 15px;
+            float: right;
+            line-height: 60px;
         }
 
-        .back-button, .phone:before, .email:before {
-            width: 60px;
-            height: 60px;
-            display: inline-block;
+        &:before {
+            content: '';
+            background: url("../../web/images/phone.svg") no-repeat center;
+        }
+    }
+
+    .email {
+        background: @blue__link;
+        color: #fff;
+
+        span {
+            padding-right: 15px;
+            float: right;
+            line-height: 60px;
         }
 
-        .back-button {
-            background: @blue__link url("../../web/images/arrow-prev.svg") no-repeat center;
-        }
-
-        .phone {
-            background: @lightblue;
-            color: #fff;
-
-            span {
-                padding-right: 15px;
-                float: right;
-                line-height: 60px;
-            }
-
-            &:before {
-                content: '';
-                background: url("../../web/images/phone.svg") no-repeat center;
-            }
-        }
-
-        .email {
-            background: @blue__link;
-            color: #fff;
-
-            span {
-                padding-right: 15px;
-                float: right;
-                line-height: 60px;
-            }
-
-            &:before {
-                content: '';
-                background: url("../../web/images/email.svg") no-repeat center;
-            }
+        &:before {
+            content: '';
+            background: url("../../web/images/email.svg") no-repeat center;
         }
     }
 
